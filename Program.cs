@@ -121,6 +121,7 @@ namespace Part_7___Collections
                     Thread.Sleep(1500);
                     Loading();
                     Console.Clear();
+
                 }
 
             }
