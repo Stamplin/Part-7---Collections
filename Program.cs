@@ -123,6 +123,53 @@ namespace Part_7___Collections
                     Console.Clear();
 
                 }
+                //add number
+                else if (input == "4")
+                {
+                    Console.WriteLine("What number would you like to add?");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    numbers.Add(num);
+                    Console.Clear();
+                    Console.WriteLine("Please, wait your numbers are being added!");
+                    Thread.Sleep(1500);
+                    Loading();
+                    Console.Clear();
+                }
+                //count number
+                else if (input == "5")
+                {
+                    Console.WriteLine("What number would you like to count?");
+                    int num = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+                    Console.WriteLine("There are " + numbers.Count(x => x == num) + " numbers " + num);
+                    Thread.Sleep(1500);
+                    Loading();
+                    Console.Clear();
+                }
+                //largest number
+                else if (input == "6")
+                {
+                    Console.Clear();
+                    Console.WriteLine("The largest number is " + numbers.Max());
+                    Thread.Sleep(1500);
+                    Loading();
+                    Console.Clear();
+                }
+                //smallest number
+                else if (input == "7")
+                {
+                    Console.Clear();
+                    Console.WriteLine("The smallest number is " + numbers.Min());
+                    Thread.Sleep(1500);
+                    Loading();
+                    Console.Clear();
+                }
+                //quit
+                else if (input == "8")
+                {
+                    Console.Clear();
+                    menuActive = false;
+                }
 
             }
         }
