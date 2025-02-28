@@ -76,9 +76,12 @@ namespace Part_7___Collections
                 Console.WriteLine("7. Print the smallest number");
                 Console.WriteLine("8. Exit");
 
-                //do maybe
-                //Console.WriteLine("Print sum and average of numbers in the list");
-                //Console.WriteLine("Find the most common number in the list");
+                //Bonus
+                Console.WriteLine();
+                Console.WriteLine("Bonus Features!");
+                Console.WriteLine();
+                Console.WriteLine("9. Print sum and average of numbers in the list");
+                Console.WriteLine("10. Find the most common number in the list");
 
                 //get input
                 string input = Console.ReadLine();
@@ -169,6 +172,25 @@ namespace Part_7___Collections
                 {
                     Console.Clear();
                     menuActive = false;
+                }
+                //sum and average
+                else if (input == "9")
+                {
+                    Console.Clear();
+                    Console.WriteLine("The sum of all numbers is " + numbers.Sum());
+                    Console.WriteLine("The average of all numbers is " + numbers.Average());
+                    Thread.Sleep(1500);
+                    Loading();
+                    Console.Clear();
+                }
+                //find most common
+                else if (input == "10")
+                {
+                    Console.Clear();
+                    Console.WriteLine("The most common number is " + numbers.GroupBy(x => x).OrderByDescending(x => x.Count()).First().Key);
+                    Thread.Sleep(1500);
+                    Loading();
+                    Console.Clear();
                 }
 
             }
