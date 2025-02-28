@@ -187,6 +187,7 @@ namespace Part_7___Collections
                 else if (input == "10")
                 {
                     Console.Clear();
+                    //group it by the number and count how many times it appears
                     Console.WriteLine("The most common number is " + numbers.GroupBy(x => x).OrderByDescending(x => x.Count()).First().Key);
                     Thread.Sleep(1500);
                     Loading();
